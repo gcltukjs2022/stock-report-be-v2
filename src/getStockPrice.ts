@@ -19,7 +19,7 @@ export interface StockPriceResult extends iData {
   changePercent: number;
 }
 
-export const getStockPrice = async (): Promise<StockPriceResult[]> => {
+const getStockPrice = async (): Promise<StockPriceResult[]> => {
   const { YAHOO_API, RAPIDAPI_KEY, RAPIDAPI_HOST } = process.env;
 
   if (!YAHOO_API || !RAPIDAPI_KEY || !RAPIDAPI_HOST) {
@@ -74,3 +74,5 @@ export const getStockPrice = async (): Promise<StockPriceResult[]> => {
     throw err; // let the caller decide how to handle failure
   }
 };
+
+export default getStockPrice;
