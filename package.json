@@ -1,7 +1,7 @@
 {
-  "name": "stock-price-app",
+  "name": "stock-report-be-v2",
   "version": "1.0.0",
-  "description": "Fetches stock prices via Yahoo Finance API (RapidAPI)",
+  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
