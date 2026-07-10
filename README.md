@@ -41,3 +41,4 @@ src/
   with a `console.warn`, not silently dropped.
 - On request failure, `getStockPrice` throws — handle/catch it at the call site.
 # stock-report-be-v2
+# stock-report-be-v2
