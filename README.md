@@ -1,4 +1,4 @@
-# Stock Price App
+# Stock Report Backend v2
 
 Fetches stock quotes (price, % change) from a Yahoo Finance API on RapidAPI.
 
@@ -25,20 +25,8 @@ npm start
 
 ## Project structure
 
-```
-src/
-  data.ts            # your list of tracked stocks (yahooSymbol, yahooName, ...)
-  getStockPrice.ts    # fetches quotes and merges them with your stock data
-  index.ts            # entry point, loads .env and runs getStockPrice()
-```
-
 ## Notes
 
-- `getStockPrice` matches API results to your `data` list by `yahooSymbol`
-  (the symbol you send is the symbol Yahoo returns), rather than by name —
-  this is more reliable and avoids special-casing any one stock.
-- If a symbol in `data` doesn't come back in the API response, it's skipped
-  with a `console.warn`, not silently dropped.
-- On request failure, `getStockPrice` throws — handle/catch it at the call site.
 # stock-report-be-v2
+
 # stock-report-be-v2
