@@ -1,5 +1,5 @@
 import scrapeNewsList from "./utils/scrapeNewsList";
-import { data, iData } from "./data";
+import { getStocks, iData } from "./utils/getStocks";
 import buildNewsUrl from "./utils/buildNewsUrl";
 import scrapeArticleBody from "./utils/scrapeArticleBody";
 import toSimplified from "./utils/convertToSimplified";
@@ -73,6 +73,8 @@ function filterNewsByValidDates(
 
 async function getAllStockNews(): Promise<StockWithNews[]> {
   const validDates = getValidDates();
+
+  const data = await getStocks();
 
   const stockPromises = data.map(async (item): Promise<StockWithNews> => {
     const newsUrl = buildNewsUrl(item);

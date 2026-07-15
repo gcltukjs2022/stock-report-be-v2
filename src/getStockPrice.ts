@@ -1,5 +1,5 @@
 import axios from "axios";
-import { data, iData } from "./data";
+import { getStocks, iData } from "./utils/getStocks";
 
 interface YahooQuote {
   symbol: string;
@@ -27,6 +27,8 @@ const getStockPrice = async (): Promise<StockPriceResult[]> => {
       "Missing required env vars: YAHOO_API, RAPIDAPI_KEY, RAPIDAPI_HOST",
     );
   }
+
+  const data = await getStocks();
 
   const symbols = data.map((el: iData) => el.yahooSymbol).join(",");
 
