@@ -13,7 +13,7 @@ function formatToYYYYMMDD(raw: string): string {
   return datePart.replace(/\//g, ""); // '20260703'
 }
 
-async function scrapeNewsList(url: string): Promise<NewsItemWoArticle[]> {
+async function scrapeAastocksNews(url: string): Promise<NewsItemWoArticle[]> {
   const { data: html } = await axios.get(url, {
     headers: { "User-Agent": "Mozilla/5.0" },
   });
@@ -57,4 +57,4 @@ async function scrapeNewsList(url: string): Promise<NewsItemWoArticle[]> {
   return results;
 }
 
-export default scrapeNewsList;
+export default scrapeAastocksNews;

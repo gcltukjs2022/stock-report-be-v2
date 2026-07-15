@@ -1,5 +1,6 @@
 import axios from "axios";
-import { data, iData } from "./data";
+import { data, iData } from "../data";
+import { sampleStockPrice } from "../sampleStockPrice";
 
 interface YahooQuote {
   symbol: string;
@@ -19,7 +20,10 @@ export interface StockPriceResult extends iData {
   changePercent: number;
 }
 
-const getStockPrice = async (): Promise<StockPriceResult[]> => {
+const getYahooStockPrice = async (): Promise<StockPriceResult[]> => {
+  // const samplePriceResult = sampleStockPrice;
+  // return samplePriceResult;
+
   const { YAHOO_API, RAPIDAPI_KEY, RAPIDAPI_HOST } = process.env;
 
   if (!YAHOO_API || !RAPIDAPI_KEY || !RAPIDAPI_HOST) {
@@ -75,4 +79,4 @@ const getStockPrice = async (): Promise<StockPriceResult[]> => {
   }
 };
 
-export default getStockPrice;
+export default getYahooStockPrice;

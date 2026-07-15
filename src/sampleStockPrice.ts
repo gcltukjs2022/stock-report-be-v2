@@ -1,13 +1,7 @@
-export interface iData {
-  name: string;
-  yahooSymbol: string;
-  currency: string;
-  futunnParam: string;
-  aastocksParam: string;
-}
-
-export const data: iData[] = [
+export const sampleStockPrice = [
   {
+    marketPrice: 19.29,
+    changePercent: -1.6819568,
     currency: "USD",
     yahooSymbol: "ZLAB",
     name: "再鼎医药（ZLAB.US）",
@@ -15,6 +9,8 @@ export const data: iData[] = [
     aastocksParam: "ZLAB",
   },
   {
+    marketPrice: 83.83,
+    changePercent: -0.8633384,
     currency: "USD",
     yahooSymbol: "PDD",
     name: "拼多多（PDD.US）",
@@ -22,6 +18,8 @@ export const data: iData[] = [
     aastocksParam: "PDD",
   },
   {
+    marketPrice: 6.47,
+    changePercent: 0,
     currency: "USD",
     yahooSymbol: "SVA",
     name: "科兴生物（SVA.US）",
@@ -29,6 +27,8 @@ export const data: iData[] = [
     aastocksParam: "SVA",
   },
   {
+    marketPrice: 11.73,
+    changePercent: 1.1206824,
     currency: "HKD",
     yahooSymbol: "2142.HK",
     name: "和铂医药（2142.HK）",
@@ -36,6 +36,8 @@ export const data: iData[] = [
     aastocksParam: "02142",
   },
   {
+    marketPrice: 7.38,
+    changePercent: -2.5099082,
     currency: "HKD",
     yahooSymbol: "9966.HK",
     name: "康宁杰瑞（9966.HK）",
@@ -43,6 +45,8 @@ export const data: iData[] = [
     aastocksParam: "09966",
   },
   {
+    marketPrice: 3.4,
+    changePercent: 0.5917154,
     currency: "HKD",
     yahooSymbol: "1875.HK",
     name: "东曜药业（1875.HK）",
@@ -50,6 +54,8 @@ export const data: iData[] = [
     aastocksParam: "01875",
   },
   {
+    marketPrice: 25.08,
+    changePercent: 6.361323,
     currency: "RMB",
     yahooSymbol: "688382.SS",
     name: "益方生物（688382.SH）",
@@ -57,6 +63,8 @@ export const data: iData[] = [
     aastocksParam: "688382",
   },
   {
+    marketPrice: 2.455,
+    changePercent: 8.628315,
     currency: "USD",
     yahooSymbol: "CNTB",
     name: "康乃德（CNTB.US）",
@@ -64,6 +72,8 @@ export const data: iData[] = [
     aastocksParam: "CNTB",
   },
   {
+    marketPrice: 3.2621,
+    changePercent: -0.24137613,
     currency: "USD",
     yahooSymbol: "ZH",
     name: "知乎（ZH.US）",
@@ -71,6 +81,8 @@ export const data: iData[] = [
     aastocksParam: "ZH",
   },
   {
+    marketPrice: 2.1,
+    changePercent: 0.47846848,
     currency: "HKD",
     yahooSymbol: "1244.HK",
     name: "3D MEDICINES（思路迪）",
@@ -78,6 +90,8 @@ export const data: iData[] = [
     aastocksParam: "01244",
   },
   {
+    marketPrice: 5.18,
+    changePercent: 7.9166594,
     currency: "HKD",
     yahooSymbol: "6955.HK",
     name: "博安生物（6955.HK）",
@@ -85,6 +99,8 @@ export const data: iData[] = [
     aastocksParam: "06955",
   },
   {
+    marketPrice: 8.645,
+    changePercent: 0.8751548,
     currency: "USD",
     yahooSymbol: "YMM",
     name: "满帮（YMM.US）",
@@ -92,6 +108,8 @@ export const data: iData[] = [
     aastocksParam: "YMM",
   },
   {
+    marketPrice: 18.85,
+    changePercent: 3.914008,
     currency: "RMB",
     yahooSymbol: "301216.SZ",
     name: "万凯新材（301216.SZ）",
@@ -99,6 +117,8 @@ export const data: iData[] = [
     aastocksParam: "301216",
   },
   {
+    marketPrice: 0.92,
+    changePercent: -2.1276574,
     currency: "HKD",
     yahooSymbol: "9886.HK",
     name: "叮当健康（9886.HK）",
@@ -106,6 +126,8 @@ export const data: iData[] = [
     aastocksParam: "09886",
   },
   {
+    marketPrice: 220,
+    changePercent: 0,
     currency: "HKD",
     yahooSymbol: "2888.HK",
     name: "Standard Chartered Bank（2888.HK）",
@@ -113,6 +135,8 @@ export const data: iData[] = [
     aastocksParam: "02888",
   },
   {
+    marketPrice: 152.6,
+    changePercent: -0.7802321,
     currency: "HKD",
     yahooSymbol: "0005.HK",
     name: "HSBC（0005.HK）",
@@ -120,6 +144,8 @@ export const data: iData[] = [
     aastocksParam: "00005",
   },
   {
+    marketPrice: 45.96,
+    changePercent: -0.04349817,
     currency: "HKD",
     yahooSymbol: "3968.HK",
     name: "CMB（3968.HK）",
@@ -127,6 +153,8 @@ export const data: iData[] = [
     aastocksParam: "03968",
   },
   {
+    marketPrice: 130.97,
+    changePercent: -0.33483177,
     currency: "USD",
     yahooSymbol: "EWBC",
     name: "East West Bank（EWBC）",
@@ -134,6 +162,8 @@ export const data: iData[] = [
     aastocksParam: "EWBC",
   },
   {
+    marketPrice: 342.085,
+    changePercent: 2.2583902,
     currency: "USD",
     yahooSymbol: "JPM",
     name: "JP Morgan（JPM）",
@@ -141,6 +171,8 @@ export const data: iData[] = [
     aastocksParam: "JPM",
   },
   {
+    marketPrice: 227.69,
+    changePercent: 2.9852126,
     currency: "USD",
     yahooSymbol: "MS",
     name: "Morgan Stanley（MS）",
@@ -148,6 +180,8 @@ export const data: iData[] = [
     aastocksParam: "MS",
   },
   {
+    marketPrice: 1136.39,
+    changePercent: 8.650838,
     currency: "USD",
     yahooSymbol: "GS",
     name: "Goldman Sachs（GS）",
@@ -155,6 +189,8 @@ export const data: iData[] = [
     aastocksParam: "GS",
   },
   {
+    marketPrice: 2066.765,
+    changePercent: -1.8658141,
     currency: "USD",
     yahooSymbol: "FCNCA",
     name: "First Citizens（FCNCA）",
@@ -162,6 +198,8 @@ export const data: iData[] = [
     aastocksParam: "FCNCA",
   },
   {
+    marketPrice: 53.74,
+    changePercent: 3.4854639,
     currency: "USD",
     yahooSymbol: "UBS",
     name: "UBS（UBS）",
@@ -169,6 +207,8 @@ export const data: iData[] = [
     aastocksParam: "UBS",
   },
   {
+    marketPrice: 133.59,
+    changePercent: -5.060419,
     currency: "USD",
     yahooSymbol: "C",
     name: "Citibank（C）",
@@ -176,6 +216,8 @@ export const data: iData[] = [
     aastocksParam: "C",
   },
   {
+    marketPrice: 9.76,
+    changePercent: -1.3144602,
     currency: "HKD",
     yahooSymbol: "2590.HK",
     name: "极智嘉（2590.HK）",
@@ -183,6 +225,8 @@ export const data: iData[] = [
     aastocksParam: "02590",
   },
   {
+    marketPrice: 61.1,
+    changePercent: -1.1326873,
     currency: "HKD",
     yahooSymbol: "1511.HK",
     name: "驭势科技（1511.HK）",
@@ -190,6 +234,8 @@ export const data: iData[] = [
     aastocksParam: "01511",
   },
   {
+    marketPrice: 8.745,
+    changePercent: -0.9626278,
     currency: "USD",
     yahooSymbol: "TME",
     name: "TME.US",
@@ -197,6 +243,8 @@ export const data: iData[] = [
     aastocksParam: "TME",
   },
   {
+    marketPrice: 83,
+    changePercent: 3.2338288,
     currency: "HKD",
     yahooSymbol: "3952.HK",
     name: "来福谐波（3952.HK）",
@@ -204,6 +252,8 @@ export const data: iData[] = [
     aastocksParam: "03952",
   },
   {
+    marketPrice: 295.6,
+    changePercent: 1.5109869,
     currency: "HKD",
     yahooSymbol: "6880.HK",
     name: "MOMENTA-W（6880.HK）",

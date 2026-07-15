@@ -1,11 +1,12 @@
-import axios from "axios";
-import * as cheerio from "cheerio";
-
 /**
  * Fetches a single news article page and extracts its body text.
  * Targets the #spanContent container (div.newscontent5 > span > p...)
- */
-async function scrapeArticleBody(url: string): Promise<string> {
+ * */
+
+import axios from "axios";
+import * as cheerio from "cheerio";
+
+async function scrapeAastocksArticleBody(url: string): Promise<string> {
   const { data: html } = await axios.get(url, {
     headers: { "User-Agent": "Mozilla/5.0" },
   });
@@ -33,4 +34,4 @@ async function scrapeArticleBody(url: string): Promise<string> {
   return paragraphs.join("\n\n");
 }
 
-export default scrapeArticleBody;
+export default scrapeAastocksArticleBody;

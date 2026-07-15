@@ -12,15 +12,14 @@ import {
 import * as fs from "fs";
 import moment from "moment";
 import path from "path";
-import { StockWithNews } from "./getAllStocksNews";
-import { StockPriceResult } from "./getStockPrice";
+import { StockWithNews } from "./old_getAllStocksNews";
+import { StockPriceResult } from "./getYahooStockPrice";
 import * as os from "os";
-import toSimplified from "./utils/convertToSimplified";
+import toSimplified from "../utils/convertToSimplified";
 
 const CURRENCY_LABEL: Record<string, string> = {
   USD: "美元",
   HKD: "港币",
-  SGD: "新加坡元",
 };
 
 function currencyLabel(currency: string): string {
@@ -112,7 +111,7 @@ const generateWord = async (
 
   // --- Price table ---
   const firstRow = new Table({
-    columnWidths: [901, 901, 901, 6307],
+    columnWidths: [901, 901, 7208],
     rows: [
       new TableRow({
         children: [
@@ -122,14 +121,10 @@ const generateWord = async (
           }),
           new TableCell({
             width: { size: 901, type: WidthType.DXA },
-            children: [new Paragraph("Listing Ticker")],
-          }),
-          new TableCell({
-            width: { size: 901, type: WidthType.DXA },
             children: [new Paragraph("Local CCY")],
           }),
           new TableCell({
-            width: { size: 6307, type: WidthType.DXA },
+            width: { size: 7208, type: WidthType.DXA },
             children: [new Paragraph("Combine")],
           }),
         ],
@@ -153,7 +148,7 @@ const generateWord = async (
       : Math.abs(Math.round(stock.changePercent));
 
     return new Table({
-      columnWidths: [901, 901, 901, 6307],
+      columnWidths: [901, 901, 7208],
       rows: [
         new TableRow({
           children: [
@@ -163,14 +158,10 @@ const generateWord = async (
             }),
             new TableCell({
               width: { size: 901, type: WidthType.DXA },
-              children: [new Paragraph(stock.ticker)],
-            }),
-            new TableCell({
-              width: { size: 901, type: WidthType.DXA },
               children: [new Paragraph(stock.currency)],
             }),
             new TableCell({
-              width: { size: 6307, type: WidthType.DXA },
+              width: { size: 7208, type: WidthType.DXA },
               children: [
                 new Paragraph(
                   `${stock.name} ${month} 月 ${day} 日 ${
@@ -233,7 +224,13 @@ const generateWord = async (
   });
 
   const formattedDate = moment().format("DDMMYYYY");
-  const filePath = path.join("/tmp", `report${formattedDate}.docx`);
+
+  // const filePath = path.join("/tmp", `report${formattedDate}.docx`);
+  const filePath = path.join(
+    os.homedir(),
+    "Desktop",
+    `report${formattedDate}.docx`,
+  );
 
   const buffer = await Packer.toBuffer(doc);
   fs.writeFileSync(filePath, buffer, { encoding: "binary" });
